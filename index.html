@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry? Don't Know What to Eat?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hungry? Don't Know What to Eat?</h1>
+    </header>
+    <main>
+        <div class="recipe-list">
+            <h2>Variety of meals to choose from</h2>
+            <div class="filters">
+                <h2>Filters</h2>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" id="cooking-method-toggle">Cooking Method</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingMethod" value="Stovetop"> Stovetop</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingMethod" value="Oven"> Oven</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingMethod" value="Air Fryer"> Air Fryer</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingMethod" value="Microwave"> Microwave</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingMethod" value="Grill"> Grill</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingMethod" value="Fry"> Fry</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingMethod" value="Other"> Other</label>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" id="category-toggle">Meal Category</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Breakfast"> Breakfast</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Lunch"> Lunch</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Dinner"> Dinner</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Dessert"> Dessert</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Snacks & Appetizers"> Snacks & Appetizers</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Drinks"> Drinks</label>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" id="meal-cooking-prep-time-toggle">Meal Cooking / Prep time</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Cooking / Prep time" value="Less than 10 minutes"> Less than 10 minutes</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Cooking / Prep time" value="10-30 minutes"> 10-30 minutes</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Cooking / Prep time" value="30 minutes and up"> 30 minutes and up</label>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" id="servings-toggle">Servings</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Servings" value="less than 5"> less than 5</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Servings" value="5 to 10"> 5 to 10</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Servings" value="10 and up"> 10 and up</label>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" id="category-toggle">Calories per Serving</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Calories per Serving" value="Less than 100"> Less than 100</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Calories per Serving" value="100 to 500"> 100 to 500</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="Calories per Serving" value="500 and up"> 500 and up</label>
+                    </div>
+                </div>
+            </div>
+            <ul id="recipe-names">
+            </ul>
+        </div>
+        <div class="recipe-details">
+            <h2>Recipe Details</h2>
+            <div id="recipe-details-content">
+            </div>
+        </div>
+    </main>
+    <script defer src="index.js"></script>
+</body>
+</html>
