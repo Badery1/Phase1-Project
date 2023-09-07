@@ -1,0 +1,130 @@
+html {
+    background: linear-gradient(to bottom, #5dacbd, #2e7e80);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+body {
+    border: 5px double rgb(0, 224, 150);
+    box-sizing: border-box;
+  }
+body > header > h1 {
+    color:rgb(0, 124, 83);
+    text-align: center;
+}
+body > main > div.recipe-list > h2 {
+    color: rgb(2, 92, 62);
+    text-align: center;
+}
+
+body > main > div.recipe-list > div > h4 {
+    color:rgb(11, 59, 43);
+    margin-left: 15px
+}
+
+.dropdown-content {
+    display: none;
+}
+.dropdown-toggle {
+    background-color: rgb(69, 108, 110);
+    border: 2px double rgb(0, 224, 150);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: antiquewhite;
+    padding: 5px;
+    cursor: pointer;
+}
+.dropdown {
+    display: inline-block;
+    margin-left: 15px;
+}
+.dropdown-toggle:hover{
+    color:#f80606;
+   }
+.dropdown-content.show {
+    display: block;
+    position: absolute;
+    background-color: rgb(64, 153, 123);
+    color:antiquewhite;
+    min-width: 160px;
+    border: 6px double rgb(0, 224, 150);
+}
+.dropdown-content label {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.dropdown-content input[type="checkbox"]:checked + label {
+    background-color: #ccc;
+}
+
+.dropdown-content input[type="checkbox"]:hover + label {
+    background-color: #ddd;
+}
+
+.scrollable-list-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    min-width: 100%;
+    padding: 10px;
+    color: rgb(83, 197, 159);
+    background-color: rgb(12, 66, 48);
+    border: 4px double rgb(22, 192, 178);
+    cursor: pointer;
+    min-width: 150px;
+    margin-right: 10px;
+    white-space: normal;
+}
+li:hover {
+    background-color: #c42020;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body > main > div.recipe-details > h2 {
+    display: none;
+    color: rgb(166, 223, 235);
+    text-align: center;
+}
+
+#recipe-details-content > h3 {
+    color:rgb(1, 63, 42);
+    text-align: center;
+}
+#recipe-details-content > img {
+    max-height: 300px;
+    width: auto;
+    border: 6px double rgb(0, 224, 150);
+    display: block;
+    margin: 0 auto;
+}
+#recipe-details-content > p {
+    text-align: center;
+    color: antiquewhite;
+}
+#recipe-details-content > a {
+    display: flex;
+    justify-content: center;
+}
+#random-recipe-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(69, 108, 110);
+    border: 2px double rgb(0, 224, 150);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: antiquewhite;
+    padding: 5px;
+    cursor: pointer;
+}
+#random-recipe-button:hover {
+    background-color: #c42020;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

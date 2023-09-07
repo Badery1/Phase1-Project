@@ -14,7 +14,7 @@
         <div class="recipe-list">
             <h2>Variety of meals to choose from</h2>
             <div class="filters">
-                <h2>Filters</h2>
+                <h4>Filters</h4>
                 <div class="dropdown">
                     <button class="dropdown-toggle" id="cooking-method-toggle">Cooking Method</button>
                     <div class="dropdown-content">
@@ -30,48 +30,87 @@
                 <div class="dropdown">
                     <button class="dropdown-toggle" id="category-toggle">Meal Category</button>
                     <div class="dropdown-content">
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Breakfast"> Breakfast</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Lunch"> Lunch</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Dinner"> Dinner</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Dessert"> Dessert</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Snacks & Appetizers"> Snacks & Appetizers</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Category" value="Drinks"> Drinks</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="category" value="Breakfast"> Breakfast</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="category" value="Lunch"> Lunch</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="category" value="Dinner"> Dinner</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="category" value="Dessert"> Dessert</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="category" value="Snacks & Appetizers"> Snacks & Appetizers</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="category" value="Drinks"> Drinks</label>
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropdown-toggle" id="meal-cooking-prep-time-toggle">Meal Cooking / Prep time</button>
                     <div class="dropdown-content">
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Cooking / Prep time" value="Less than 10 minutes"> Less than 10 minutes</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Cooking / Prep time" value="10-30 minutes"> 10-30 minutes</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Meal Cooking / Prep time" value="30 minutes and up"> 30 minutes and up</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingTime" id="Less than 10 minutes" value="Less than 10 minutes"> Less than 10 minutes</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingTime" id="10-30 minutes" value="10-30 minutes"> 10-30 minutes</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="cookingTime" id="30 minutes and up" value="30 minutes and up"> 30 minutes and up</label>
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropdown-toggle" id="servings-toggle">Servings</button>
                     <div class="dropdown-content">
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Servings" value="less than 5"> less than 5</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Servings" value="5 to 10"> 5 to 10</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Servings" value="10 and up"> 10 and up</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="servings" id="less than 5" value="less than 5"> less than 5</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="servings" id="5 to 10" value="5 to 10"> 5 to 10</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="servings" id="10 and up" value="10 and up"> 10 and up</label>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropdown-toggle" id="category-toggle">Calories per Serving</button>
+                    <button class="dropdown-toggle" id="Calories-toggle">Calories per Serving</button>
                     <div class="dropdown-content">
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Calories per Serving" value="Less than 100"> Less than 100</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Calories per Serving" value="100 to 500"> 100 to 500</label>
-                        <label><input type="checkbox" class="filter-checkbox" data-filter="Calories per Serving" value="500 and up"> 500 and up</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="calories" id="Less than 100" value="Less than 100"> Less than 100</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="calories" id="100 to 500" value="100 to 500"> 100 to 500</label>
+                        <label><input type="checkbox" class="filter-checkbox" data-filter="calories" id="500 and up" value="500 and up"> 500 and up</label>
                     </div>
                 </div>
             </div>
-            <ul id="recipe-names">
-            </ul>
-        </div>
-        <div class="recipe-details">
-            <h2>Recipe Details</h2>
-            <div id="recipe-details-content">
+            <div class="scrollable-list-container">
+                <ul id="recipe-names">
+                </ul>
             </div>
         </div>
-    </main>
-    <script defer src="index.js"></script>
-</body>
-</html>
+        <button id="random-recipe-button">Can't Choose? Try something Random!</button>
+        <div class="recipe-details">
+            <h2>Recipe Details</h2>
+                <div id="recipe-details-content">    
+                </div>
+            <div class="dropdown">
+            <button class= "dropdown-toggle" id="new-recipe-form">Submit Your Favorite Meal</button>
+            <div class="dropdown-content">
+            <form class = "submit" id="New Recipe" >
+            <h4>Meal Name</h4>
+            <input type="text" id="meal name" name="category1" required>
+    
+            <h4>Image URL</h4>
+            <input type="text" id="meal image" name="category2" required>
+    
+            <h4>Meal Category</h4>
+            <input type="text" id="meal category" name="category3" required>
+    
+            <h4>Cooking Method</h4>
+            <input type="text" id="cooking method" name="category4" required>
+    
+            <h4>Cooking Time in Minutes</h4>
+            <input type="text" id="meal cook time" name="category5" required>
+    
+            <h4>Prep Time in Minutes</h4>
+            <input type="text" id="meal prep time" name="category6" required>
+    
+            <h4>Servings</h4>
+            <input type="text" id="meal servings" name="category7" required>
+    
+            <h4>Calories Per Serving</h4>
+            <input type="text" id="meal calories" name="category8" required>
+    
+            <h4>Full Recipe URL</h4>
+            <input type="text" id="recipe link" name="category9" required>
+    
+            <input type="submit" value="Submit">
+            </form>
+            </div>
+        </div>  
+    </div>  
+            
+        </main>
+        <script defer src="index.js"></script>
+    </body>
+    </html>
